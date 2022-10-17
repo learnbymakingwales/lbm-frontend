@@ -1,0 +1,34 @@
+{
+  "name": "lbm-frontend",
+  "description": "Learn by making wales frontend",
+  "version": "0.2.8",
+  "engines": {
+    "node": ">= 4.2.0"
+  },
+  "author": "Learn by making team team",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/learnbymakingwales/lbm-frontend.git"
+  },
+  "bugs": {
+    "url": "https://github.com/learnbymakingwales/lbm-frontend/issues"
+  },
+  "keywords": ["frontend", "design system", "template"],
+  "license": "MIT",
+  "dependencies": {
+    "autoprefixer": "^10.4.7",
+    "browser-sync": "^2.27.7",
+    "chokidar-cli": "^3.0.0",
+    "copyfiles": "latest",
+    "sass": "^1.53.0",
+    "nps": "^5.10.0",
+    "postcss-cli": "^9.1.0",
+    "rollup": "^2.60.0",
+    "standardx": "^7.0.0"
+  },
+  "homepage": "https://github.com/learnbymakingwales/lbm-frontend/package",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}

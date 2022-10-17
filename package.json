@@ -1,0 +1,44 @@
+{
+  "name": "lbm-frontend-repo",
+  "version": "0.1.0",
+  "description": "frontend components and assets for learn by making",
+  "engines": {
+    "node": "^16.0.0"
+  },
+  "scripts": {
+    "build:javascripts": "rollup --config rollup.config.js",
+    "build:stylesheets": "sass lbm_frontend/src/scss:assets/stylesheets --load-path lbm_frontend/templates",
+    "clean:package": "rm -rf package/lbm-frontend",
+    "copy:scss": "copyfiles 'lbm_frontend/src/scss/**/*.scss' package/lbm-frontend/ --up 3 && copyfiles 'lbm_frontend/templates/components/**/*.scss' package/lbm-frontend/ --up 2",
+    "copy:templates": "copyfiles 'lbm_frontend/templates/**/*.jinja' package/lbm-frontend/ --up 2",
+    "css:autoprefix": "npx postcss assets/stylesheets/**/*.css --base assets/stylesheets --dir assets/stylesheets/ --no-map --use autoprefixer",
+    "build:package": "npm-run-all clean:package build:javascripts copy:*",
+    "watch:javascripts": "rollup --config rollup.config.js --watch",
+    "lint:stylesheets": "sass-lint --config .sass-lint.yml 'lbm_frontend/**/*.scss' --verbose --no-exit",
+    "build": "npm-run-all --serial lint:* build:*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/learnbymakingwales/lbm-frontend.git"
+  },
+  "keywords": [
+    "frontend",
+    "css",
+    "jinja"
+  ],
+  "author": "The learn by making team",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/learnbymakingwales/lbm-frontend/issues"
+  },
+  "homepage": "https://github.com/learnbymakingwales/lbm-frontend#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.4.7",
+    "copyfiles": "latest",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^9.1.0",
+    "rollup": "^2.60.0",
+    "sass": "^1.53.0",
+    "sass-lint": "^1.13.1"
+  }
+}
