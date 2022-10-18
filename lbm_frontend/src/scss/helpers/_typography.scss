@@ -1,0 +1,13 @@
+/// 'Common typography' helper
+///
+/// Sets the font family and associated properties, such as font smoothing. Also
+/// overrides the font for print.
+///
+/// @param {List} $font-family [$lbm-font-family] Font family to use
+/// @access public
+
+@mixin lbm-typography-common ($font-family: $lbm-font-family) {
+  font-family: $font-family;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

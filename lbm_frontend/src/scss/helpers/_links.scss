@@ -1,0 +1,48 @@
+@mixin lbm-link-style ($font-family: $lbm-font-family) {
+  --link-hover-underline-colour: var(--link-hover-colour);
+  --link-active-colour: var(--link-hover-colour);
+  
+  @include lbm-typography-common($font-family: $font-family);
+  text-decoration: underline;
+
+  @if $lbm-link-underline-thickness {
+    text-decoration-thickness: $lbm-link-underline-thickness;
+  }
+
+  @if $lbm-link-underline-offset {
+    text-underline-offset: $lbm-link-underline-offset;
+  }
+  
+  &:link {
+    color: var(--link-colour);
+  }
+
+  &:visited {
+    color: var(--link-colour);
+  }
+
+  &:hover {
+    color: var(--link-hover-colour);
+    @if $lbm-link-hover-underline-thickness {
+      text-decoration-color: var(--link-hover-underline-colour);
+      text-decoration-thickness: $lbm-link-hover-underline-thickness;
+      // Disable ink skipping on underlines on hover. Browsers haven't
+      // standardised on this part of the spec yet, so set both properties
+      -webkit-text-decoration-skip-ink: none;
+              text-decoration-skip-ink: none; // Chromium, Firefox
+      -webkit-text-decoration-skip: none;
+              text-decoration-skip: none; // Safari
+    }
+  }
+
+  &:active {
+    color: var(--link-active-colour);
+  }
+
+  // When focussed, the text colour needs to be darker to ensure that colour
+  // contrast is still acceptable
+  &:focus {
+    @include lbm-focused-text;
+    color: var(--focus-text-colour);
+  }
+}

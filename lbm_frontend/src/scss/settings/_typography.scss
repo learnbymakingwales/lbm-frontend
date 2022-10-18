@@ -1,0 +1,80 @@
+/// List of font families to use 
+///
+/// @type List
+/// @access public
+
+$lbm-font-family: 'Open Sans', sans-serif !default;
+
+$lbm-font-family-mono: monospace !default;
+
+// =========================================================
+// Font weights
+// =========================================================
+
+/// Font weight for regular typography
+///
+/// @type Number
+/// @access public
+$lbm-font-weight-regular: 400 !default;
+
+/// Font weight for bold typography
+///
+/// @type Number
+/// @access public
+$lbm-font-weight-bold: 700 !default;
+
+// =========================================================
+// Link underlines
+// =========================================================
+
+
+/// Thickness of link underlines
+///
+/// The default will be either:
+///
+///  - 1px
+///  - 0.0625rem, if it's thicker than 1px because the user has changed the text
+///    size in their browser
+///
+/// Set this variable to `false` to avoid setting a thickness.
+///
+/// @type Number
+/// @access public
+
+$lbm-link-underline-thickness: unquote("max(1px, .0625rem)") !default;
+
+/// Offset of link underlines from text baseline
+///
+/// Set this variable to `false` to avoid setting an offset.
+///
+/// @type Number
+/// @access public
+
+$lbm-link-underline-offset: .1em !default;
+
+/// Thickness of link underlines in hover state
+///
+/// The default for each link will be the thickest of the following:
+///
+///  - 3px
+///  - 0.1875rem, if it's thicker than 3px because the user has changed the text
+///    size in their browser
+///  - 0.12em (relative to the link's text size)
+///
+/// Set this variable to `false` to avoid setting a thickness.
+///
+/// @type Number
+/// @access public
+
+$lbm-link-hover-underline-thickness: unquote("max(3px, .1875rem, .12em)") !default;
+
+// =========================================================
+// Code blocks
+// =========================================================
+
+/// Font size for code blocks - takes a number and is used to access size map
+///
+/// @type Number
+/// @access public
+
+$lbm-code-font-size: 16;

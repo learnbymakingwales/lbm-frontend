@@ -1,9 +1,25 @@
-$cdps-green: #007361;
-$cdps-link-colour: #0360a6;
-$cdps-highlight-colour: #e00530;
-$cdps-focus-outline-colour: #ffd530;
+// CDPS colours
+// -----------------------------------------
 
-$cdps-darker-grey: #1f1f1f;
-$cdps-dark-grey: #323232;
-$cdps-mid-grey: #ddd;
-$cdps-light-grey: #eee;
+$cdps-text-colour: #000 !default;
+$cdps-green: #007361 !default;
+$cdps-link-colour: #0360a6 !default;
+$cdps-link-hover-colour: #3b7dc5 !default;
+$cdps-highlight-colour: #e00530 !default;
+$cdps-focus-outline-colour: #ffd530 !default;
+
+$cdps-darker-grey: #1f1f1f !default;
+$cdps-dark-grey: #323232 !default;
+$cdps-mid-grey: #ddd !default;
+$cdps-light-grey: #eee !default;
+
+
+// setting up CSS variables
+// -----------------------------------------
+
+:root {
+  --link-colour: #{$cdps-link-colour};
+  --link-hover-colour: #{$cdps-link-hover-colour};
+  --focus-colour: #{$cdps-focus-outline-colour};
+  --focus-text-colour: #{$cdps-text-colour};
+}
