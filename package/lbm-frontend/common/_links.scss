@@ -1,0 +1,7 @@
+%lbm-link {
+  @include lbm-link-style;
+}
+
+.lbm-link {
+  @extend %lbm-link;
+}

@@ -1,0 +1,12 @@
+@mixin lbm-focused-text {
+  // When colours are overridden, for example when users have a dark mode,
+  // backgrounds and box-shadows disappear, so we need to ensure there's a
+  // transparent outline which will be set to a visible colour.
+
+  color: var(--focus-text-colour);
+  background-color: var(--focus-colour);
+  box-shadow: 0 -2px var(--focus-colour), 0 4px var(--focus-text-colour);
+  // When link is focussed, hide the default underline since the
+  // box shadow adds the "underline"
+  text-decoration: none;
+}
