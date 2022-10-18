@@ -29,5 +29,5 @@ flake8:
 	flake8 .
 
 commit-package::
-	git add package/colmjude-frontend
+	git add package/lbm-frontend
 	git diff --quiet && git diff --staged --quiet || (git commit -m "Rebuilt package $(shell date +%F)"; git push origin $(BRANCH))
