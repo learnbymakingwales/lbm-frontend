@@ -14,12 +14,35 @@ $cdps-mid-grey: #ddd !default;
 $cdps-light-grey: #eee !default;
 
 
+// Learn by making colours
+// -----------------------------------------
+
+$lbm-off-white: #fffdf6;
+$lbm-red: #e33b43;
+//$lbm-black: #19323c;
+$lbm-purple: #d996c8;
+$lbm-purple-accent: #c45baa;
+$lbm-blue: #99c8d6;
+$lbm-blue-accent: #6aa7c8;
+$lbm-blue-dark: #3d80a4;
+$lbm-yellow: #fbb84b;
+$lbm-yellow-accent: #e89005;
+
+$lbm-black: #0a0908;
+$lbm-grey-darkest: #2e2b28;
+$lbm-grey-dark: #84807a;
+$lbm-grey-mid: #bbb8b4;
+$lbm-grey-light: #ddd9d3;
+$lbm-grey-lightest: #eeebe7;
+
+
 // setting up CSS variables
 // -----------------------------------------
 
 :root {
-  --link-colour: #{$cdps-link-colour};
-  --link-hover-colour: #{$cdps-link-hover-colour};
-  --focus-colour: #{$cdps-focus-outline-colour};
-  --focus-text-colour: #{$cdps-text-colour};
+  --text-colour: #{$lbm-black};
+  --link-colour: #{$lbm-blue-dark};
+  --link-hover-colour: #{$lbm-blue-accent};
+  --focus-colour: #{$lbm-yellow};
+  --focus-text-colour: var(--text-colour);
 }
