@@ -20,3 +20,20 @@ $lbm-spacing-points: (
   8: 50px,
   9: 60px
 ) !default;
+
+// =========================================================
+// Spaces
+// =========================================================
+
+/// Regular vertical gap used between elements
+///
+/// @type Number
+/// @access public
+$lbm-vertical-spacing: 45px !default;
+
+/// Regular horizontal gap used between elements
+///
+/// @type Number
+/// @access public
+$lbm-gutter: 30px !default;
+$lbm-gutter-half: math.div($lbm-gutter, 2);
