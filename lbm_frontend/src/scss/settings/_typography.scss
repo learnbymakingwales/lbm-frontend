@@ -8,6 +8,22 @@ $lbm-font-family: 'Open Sans', sans-serif !default;
 $lbm-font-family-mono: monospace !default;
 
 // =========================================================
+// Font sizes
+// =========================================================
+
+/// Font size small screens
+///
+/// @type Number
+/// @access public
+$lbm-font-size-small: 20px !default;
+
+/// Font size large screens
+///
+/// @type Number
+/// @access public
+$lbm-font-size-large: 25px !default;
+
+// =========================================================
 // Font weights
 // =========================================================
 
