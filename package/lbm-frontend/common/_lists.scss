@@ -36,10 +36,19 @@
   list-style-type: disc;
 }
 
+%lbm-list--number {
+  padding-left: 20px;
+  list-style-type: decimal;
+}
+
 .lbm-list {
   @extend %lbm-list;
 }
 
 .lbm-list--bullet {
   @extend %lbm-list--bullet;
+}
+
+.lbm-list--number {
+  @extend %lbm-list--number;
 }
